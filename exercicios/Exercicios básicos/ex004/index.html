@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ex004</title>
+</head>
+<body>
+    <h1>Somando os números</h1>
+    <p>Digite um número:</p>
+    <input type="number" name="n1" id="txn1">
+    <p>Digite outro número:</p>
+    <input type="number" name="n1" id="txn2">
+
+    <div id="msg">
+
+    </div>
+
+   <input type="submit" value="enviar" onclick="soma()">
+
+
+<script>
+    function soma(){
+     var txn1 = window.document.getElementById ('txn1')
+     var txn2 = window.document.getElementById ('txn2')
+     var n1 = Number(txn1.value)
+     var n2= Number(txn2.value)
+     var R = n1 + n2 
+     var msg= window.document.getElementById ('msg')
+    
+     msg.innerHTML = `A Soma de ${n1} + ${n2} é ${R}`
+
+
+    }
+
+</script>
+
+    
+</body>
+</html>
