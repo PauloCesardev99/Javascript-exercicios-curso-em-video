@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-Br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ex 009</title>
+    <link rel="stylesheet" href="Estilogeral.css">
+</head>
+<body>
+    <Main>
+    <h1>Conversor de dolar em real</h1>
+    <p>Quanto de dinheiro você tem na carteira?</p>
+    <p><input type="number" name="ntxt" id="ntxt"></p>
+    <div id="msg">
+
+    </div>
+    <p><input type="submit" value="Enviar" onclick="conversor()"></p>
+
+    <script>
+        function conversor(){
+            var ntxt = window.document.getElementById('ntxt')
+            var msg = window.document.getElementById ('msg')
+            var n = Number(ntxt.value)
+            var c = n*3.45
+            msg.innerHTML =  `Você tem ${c} Dolares`
+            
+
+        }
+
+
+
+    </script>
+    </Main>
+
+    
+</body>
+</html>

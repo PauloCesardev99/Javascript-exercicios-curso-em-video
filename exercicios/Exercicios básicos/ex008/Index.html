@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>008</title>
+    <link rel="stylesheet" href="Estilogeral.css">
+</head>
+<body>
+    <main>
+        <h1>Ex 008</h1>
+        <h2>Mostrar os valores relativos em distancia:</h2>
+        <p>
+            <input type="number" name="txn" id="txn">
+        </p>
+        <div id="msg">
+
+        </div>
+        <p>
+            <input type="submit" value="Enviar" onclick="relativos()">
+        </p>
+
+
+
+
+    </main>
+
+    <script>
+        function relativos(){
+            var txn = window.document.getElementById('txn')
+            var msg = window.document.getElementById ('msg')
+            var n = txn.value
+            var km = n/1000
+            var hm = n/100
+            var dam = n/10
+            var dm = n*10
+            var cm =  n*100
+            var m = n*1000
+            msg.innerHTML =  ` ${n} Metros em Km é ${km}Km , Em hm é ${hm}hm, em dam é ${dam}dam, em dm é ${dm}Dm, em cm é ${cm}Cm, em é ${m}m `    
+            
+             }
+
+
+    </script>
+    
+</body>
+</html>

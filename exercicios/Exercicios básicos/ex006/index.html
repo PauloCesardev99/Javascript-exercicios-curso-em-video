@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ex006</title>
+    <link rel="stylesheet" href="Estilogeral.css">
+</head>
+<body>
+    <Main>
+    <h1>Ex006</h1>
+    <h2>Mostrar o antecessor e o sucessor</h2>
+
+    <p><input type="number" name="tx1" id="tx1"></p>
+
+
+    <div id="msg">
+
+    </div>
+
+    <p><input type="submit" value="Resultado" onclick="antecessor()"></p>
+    </Main>
+
+
+
+
+    <script>
+        function antecessor(){
+            var tx1 = window.document.getElementById('tx1')
+            var msg = window.document.getElementById('msg')
+            n1 = Number(tx1.value)
+            ant = n1-1
+            suc = n1+1
+
+            msg.innerHTML = ` o antecessor de ${n1} é ${ant} e o sucessor é ${suc}`
+
+            }
+            
+
+
+    </script>
+    
+
+    
+</body>
+</html>

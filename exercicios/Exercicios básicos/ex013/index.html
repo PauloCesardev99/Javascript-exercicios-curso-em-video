@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ex012</title>
+    <link rel="stylesheet" href="Estilogeral.css">
+</head>
+<body>
+    <main>
+    <h1>Aumento de 15% para o funcionario</h1>
+    <p>
+        <input type="number" name="txn" id="txn">
+    </p>
+    <div id="msg">
+
+    </div>
+
+    <input type="submit" value="enviar" onclick="aumento()">
+
+
+
+    </main>
+
+    <script>
+        function aumento(){
+            var tn = document.getElementById('txn')
+            var msg = document.getElementById('msg')
+            var s = Number(tn.value)
+            var aum =  s * 0.15
+            var sm = s+ aum 
+
+            msg.innerHTML = `o seu novo aumento é ${sm}$`
+             
+
+            
+            
+            
+
+
+
+        }
+
+    </script>
+
+    
+</body>
+</html>

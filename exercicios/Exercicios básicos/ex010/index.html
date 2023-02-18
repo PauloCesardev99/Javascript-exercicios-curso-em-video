@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex 010</title>
+    <link rel="stylesheet" href="Estilogeral.css">
+</head>
+<body>
+    <main>
+        <h1>Quantidade de tinta necessaria para pintar a parede</h1>
+        <p>Largura</p>
+        <p><input type="number" name="tx1" id="tx1"></p>
+        <p>Altura</p>
+        <p><input type="number" name="tx2" id="tx2"></p>
+        <div id="msg">
+
+        </div>
+
+        <p><input type="submit" value="Enviar" onclick="calcular()"></p>
+
+        <script>
+            function calcular(){
+                var txn1 = window.document.getElementById('tx1')
+                var txn2 = window.document.getElementById('tx2')
+                var msg = window.document.getElementById('msg')
+                var n1 = Number(txn1.value)
+                var n2 = Number(txn2.value)
+                var m = n1*n2
+                var l = (n1*n2)/2
+
+                msg.innerHTML  = `A sua parede tem ${m} metros² e são necessario ${l} litros de tinta para pinta-la.`
+
+
+
+            }
+
+        </script>
+
+
+
+
+    </main>
+
+    
+</body>
+</html>

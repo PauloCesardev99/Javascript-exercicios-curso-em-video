@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-Br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex007</title>
+    <link rel="stylesheet" href="Estilogeral.css">
+</head>
+<body>
+        <main>
+            <h1>Ex 007</h1>
+            <h2>O dobro do Número e a terça-parte dele</h2>
+            
+            <p>
+                <input type="number" name="tx1" id="tx1">
+            </p>
+            <div id="msg">
+
+            </div>
+
+            <input type="button" value="Resultado" onclick="res()">
+
+        </main>
+    <script>
+        function res(){
+           var tx1 = window.document.getElementById('tx1')
+           var msg = window.document.getElementById('msg')
+           var n = Number(tx1.value)
+           var dobro = n*2
+           var terça = n/3
+            msg.innerHTML = `O dobro do Número ${n} é ${dobro}  a terça parte é ${terça} `
+
+
+        }
+    </script>
+</body>
+</html>

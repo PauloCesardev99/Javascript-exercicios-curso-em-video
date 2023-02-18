@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ex014</title>
+    <link rel="stylesheet" href="Estilogeral.css">
+</head>
+<body>
+    <main>
+        <h1>Locadora de Carro</h1>
+        <p>0.20 Centavos por Km</p>
+        <p>90 reais por Dia</p>
+        <p>Quantos km você andou?</p>
+        <p>
+           <input type="number" name="txtkm" id="txtkm" placeholder="km">
+        </p>
+        <p>Quantos dias você andou?</p>
+        <p><input type="number" name="txtdia" id="txtdia" placeholder="dias"></p>
+        <div id="msg">
+
+        </div>
+        <p><input type="button" value="Enviar" onclick="locadora()"></p>
+    </main>
+
+
+    <script>
+        function locadora(){
+            var txtkm = window.document.getElementById('txtkm')
+            var txtdia = window.document.getElementById('txtdia')
+            var msg = window.document.getElementById('msg')
+            var km = Number(txtkm.value)
+            var dia = Number(txtdia.value)
+            var carropordia = 90*dia 
+            var porkm = 0.20*km
+            var total = carropordia + porkm
+
+            msg.innerHTML= `O total a pagar por Km rodados é ${porkm}$ e o total a pagar por dias rodados é ${carropordia}$. O preço final é ${total}$`
+
+            
+            
+
+        } 
+            
+        
+
+
+
+
+        
+
+
+
+    </script>
+    
+</body>
+</html>
