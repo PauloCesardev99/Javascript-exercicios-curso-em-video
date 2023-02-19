@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ex003</title>
+    <link rel="stylesheet" href="Estilogeral.css">
+</head>
+<body>
+    <Main>
+    <h1>Calcule sua média de aprovação</h1>
+    <h2>Média de aprovação: 7.00 </h2>
+    <p>Seu Nome:</p>
+    <p><input type="text" name="txtnome" id="txtnome"></p>
+    <p>Sua primeira Nota:</p>
+    <p><input type="number" name="txn1" id="txtn1"></p>
+    <p>Sua Segunda Nota:</p>
+    <p><input type="number" name="txtn2" id="txtn2"></p>
+    <div id="msg">
+
+    </div>
+    <p><input type="submit" value="CalcularMédia" onclick="cmedia()"></p>
+    </Main>
+    
+
+    <script>
+        function cmedia(){
+            var nome = window.document.getElementById('txtnome')
+            var msg = window.document.getElementById('msg')
+            var txtn1 = window.document.getElementById('txtn1')
+            var txtn2= window.document.getElementById('txtn2')
+            var n1 = Number(txtn1.value)
+            var n2 = Number (txtn2.value)
+            var media = (n1+n2)/2
+            
+            if (media>=7){
+                msg.innerHTML = `${nome.value}. A sua média é ${media} e Você está aprovado`
+            
+            } else{
+                msg.innerHTML = `${nome.value}. A sua Média é ${media} e Você está reprovado`
+            }
+
+        }
+
+
+    </script>
+
+
+
+
+</body>
+</html>

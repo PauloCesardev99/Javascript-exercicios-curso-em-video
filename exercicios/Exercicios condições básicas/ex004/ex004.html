@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ex004</title>
+    <link rel="stylesheet" href="Estilogeral.css">
+</head>
+<body>
+ <main>
+    <h1>Descubra se o seu número é par ou impar:</h1>
+    <p> <input type="number" name="" id="txtn"></p>
+    <div id="msg">
+
+    </div>
+    <p><input type="submit" value="Descubra" onclick="valor()"></p>
+ </main>
+
+    <script>
+        function valor(){
+        var txtn = window.document.getElementById('txtn')
+        var msg = window.document.getElementById('msg')
+        var n = Number(txtn.value)
+
+        if (n%2 == 0){
+            msg.innerHTML= 'Esse Número é Par'
+        }  else{
+            msg.innerHTML = 'Esse Número é Impar'
+        }
+
+
+
+    }
+    
+    </script>
+
+
+</main>
+</body>
+</html>

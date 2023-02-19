@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ex005</title>
+    <link rel="stylesheet" href="Estilogeral.css">
+</head>
+<body>
+    <main>
+        <h1>Descubra se o ano é bisexto</h1>
+        <p> <input type="number" name="txtano" id="txtano"></p>
+        <div id="msg">
+
+        </div>
+        <p> <input type="submit" value="enviar" onclick="bisexto()"></p>
+
+        <script>
+            function bisexto(){
+                var msg = window.document.getElementById('msg')
+                var txtano = window.document.getElementById('txtano')
+                var ano = Number(txtano.value)
+                
+                if(ano%4 == 0){
+                    msg.innerHTML = 'Esse Ano é bisexto'
+                } else{
+                    msg.innerHTML = 'Esse ano não é bisexto'
+                }
+
+
+
+
+            }
+
+
+        </script>
+
+
+
+
+    </main>
+    
+</body>
+</html>

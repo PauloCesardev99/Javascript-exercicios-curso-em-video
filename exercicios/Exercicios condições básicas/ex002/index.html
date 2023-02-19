@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ex002</title>
+    <link rel="stylesheet" href="Estilogeral.css">
+</head>
+<body>
+    <main>
+        <h1>Descubra se Você pode votar</h1>
+        <h2>Em que ano você nasceu?</h2>
+        <p><input type="number" name="txtano" id="txtano" placeholder="Coloque o ano de nascimento aqui"></p>
+        <div id="msg">
+
+        </div>
+        
+        <p><input type="submit" value="enviar" onclick="votação()"></p>
+
+        <script>
+            function votação(){
+            var txtano = window.document.getElementById('txtano')
+            var msg = window.document.getElementById('msg')
+            var ano = Number(txtano.value)
+            var idade = 2023 - ano
+            if (idade>=18){
+                msg.innerHTML= `Você tem ${idade} anos e pode votar`
+            }
+            else{
+                msg.innerHTML = `Você tem ${idade} anos e não pode votar`
+            }
+
+
+            }
+
+        </script>
+
+
+
+
+    </main>
+    
+</body>
+</html>

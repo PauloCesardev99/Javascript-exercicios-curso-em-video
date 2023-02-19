@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ex015</title>
+    <link rel="stylesheet" href="Estilogeral.css">
+</head>
+<body>
+    <main>
+        <h1> Salario por dias trabalhado </h1>
+        <p>Quantos dias você Trabalhou:</p>
+        <p><input type="number" name="txtdia" id="txtdia"></p>
+        <div id="msg">
+
+        </div>
+
+        <p><input type="submit" value="Calcular salário" onclick="salario()"></p>
+    </main>
+        <script>
+            function salario(){
+                var msg = window.document.getElementById('msg')
+                var txtdia = window.document.getElementById('txtdia')
+                var dia = Number(txtdia.value)
+                var salario = 200
+                var total = salario * dia
+                msg.innerHTML = `Você trabalhou ${dia} dias e recebeu ${total}`
+
+
+
+
+            }
+        </script>
+
+
+
+
+
+
+    </main>
+
+    
+</body>
+</html>
