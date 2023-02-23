@@ -1,0 +1,12 @@
+body{ height: 80vh;
+    background-color: rgba(80, 80, 240, 0.616);
+   
+}
+Main{
+width: 300px;
+margin: auto;
+background-color: white;
+padding: 30px;
+border-radius: 20px;
+margin-top: 100px;
+}

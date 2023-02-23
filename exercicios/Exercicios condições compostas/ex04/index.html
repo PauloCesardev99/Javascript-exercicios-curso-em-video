@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ex04</title>
+   <link rel="stylesheet" href="Estilogeral.css">
+</head>
+<body>
+    <main>
+        <h1>Aumento salarial</h1>
+        <p>Qual é seu nome?</p>
+        <p>
+            <input type="text" name="nome" id="nome">
+        </p>
+        <p>
+            Qual é o seu salario?
+        </p>
+        <p>
+            <input type="number" name="txts" id="txts">
+        </p>
+        <p>Quantos anos você trabalha na empresa?</p>
+        <p>
+            <input type="number" name="txtano" id="txtano">
+        </p>
+        <div id="msg">
+
+        </div>
+       <input type="submit" value="enviar" onclick="salario()">
+
+    </main>
+    <script>
+        function salario(){
+            var nome = window.document.getElementById('nome')
+            var salariotxt = window.document.getElementById('txts')
+            var msg = window.document.getElementById('msg')
+            var anotxt = window.document.getElementById('txtano')
+            var salario = Number(salariotxt.value)
+            var ano = Number(anotxt.value)
+
+            if(ano>=3 && ano<10){
+                salario =  (12.5*salario)/100 + salario
+                msg.innerHTML = `O seu nome é ${nome.value} você trabalhar à ${ano} e o seu novo salario é ${salario} Reais`
+            } else if(ano<3){
+                salario =  (3*salario)/100 + salario
+                msg.innerHTML = `O seu nome é ${nome.value} você trabalhar a ${ano} e o seu novo salario é ${salario} reais`
+            } else{
+                salario =  (20*salario)/100 + salario
+                msg.innerHTML = `O seu nome é ${nome.value} você trabalhar à ${ano} e o seu novo salario é ${salario} reais`
+            }
+            
+
+
+
+
+
+        }
+    </script>
+    
+</body>
+</html>

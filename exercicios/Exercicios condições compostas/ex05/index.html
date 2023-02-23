@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ex005</title>
+    <link rel="stylesheet" href="Estilogeral.css">
+</head>
+<body>
+    <main>
+        <h1>Descubra o tipo de triangulo</h1>
+        <p>Escolha o primeiro lado:</p>
+        <p>
+            <input type="number" name="" id="l1txt">
+        </p>
+        <p>Escolhe o segundo lado:</p>
+        <p>
+            <input type="number" name="" id="l2txt">
+        </p>
+        <p>Escolhe o terceiro lado:</p>
+        <p>
+            <input type="number" name="" id="l3txt">
+        </p>
+        <div id="msg">
+
+        </div>
+        <p>
+           <input type="submit" value="Enviar" onclick="valor()">
+        </p>
+
+    </main>
+    <script>
+        function valor(){
+        var l1txt = window.document.getElementById('l1txt')
+        var l2txt = window.document.getElementById('l2txt')
+        var l3txt = window.document.getElementById('l3txt')
+        var msg =   window.document.getElementById('msg')
+        var l1 = Number(l1txt.value)
+        var l2 = Number(l2txt.value)
+        var l3 = Number(l3txt.value)
+        if(l1==l2 && l1==l3 && l2==l3){
+        msg.innerHTML = `Esse triangulo é EQUILATERO`}
+        else if(l1==l2 || l1==l3||l2==l3){
+            msg.innerHTML = `Esse Triangulo é ISÓSCELES`
+        }
+        else{
+        msg.innerHTML = `Esse triangulo é ESQUALENO`
+        }
+
+        
+        
+            
+ }
+    </script>
+    
+</body>
+</html>

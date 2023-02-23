@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ex01</title>
+    <link rel="stylesheet" href="Estilogeral.css">
+</head>
+<body>
+    <main>
+        <h1>Comparar Números</h1>
+        <p>Escolha um Número:</p>
+        <p>
+            <input type="number" name="txtn1" id="txn1">
+        </p>
+        <p>Escolha outro Número:</p>
+        <p>
+            <input type="number" name="txtn2" id="txn2">
+        </p>
+        <p>
+            <input type="submit" value="Calcular" onclick="calcular()">
+        </p>
+
+        <div id="msg">
+
+        </div>
+
+
+
+
+
+    </main>
+
+    <script>
+        function calcular(){
+            var txtn1 = document.getElementById ('txn1')
+            var txtn2 = document.getElementById('txn2')
+            var msg = document.getElementById('msg')
+            var n1 = Number(txtn1.value)
+            var n2 = Number(txtn2.value)    
+        
+            if (n1>n2){
+            msg.innerHTML = `${n1} é maior que ${n2}`
+            }  else if (n2>n1) {
+                msg.innerHTML =`${n1} é menor que ${n2}  `
+            } else{
+                msg.innerHTML = `Os número são iguais`
+            }
+            
+        } 
+        
+    </script>
+    
+</body>
+</html>

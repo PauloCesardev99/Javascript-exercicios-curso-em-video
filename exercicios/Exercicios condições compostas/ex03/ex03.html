@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ex03</title>
+</head>
+<body>
+    <main>
+        <h1>valor do terreno</h1>
+        <p>Coloque a altura aqui</p>
+        <input type="number" name="txtn1" id="txtn1">
+        <p>coloque o comprimento</p>
+        <input type="number" name="txtn2" id="txtn2">
+        <div id="msg">
+
+        </div>
+        <p>
+            <input type="submit" value="calcular" onclick="terreno()">
+        </p>
+
+    </main>
+    <script>
+        function terreno(){
+        var alttxt = window.document.getElementById ('txtn1')
+        var comptxt = window.document.getElementById ('txtn2')
+        var msg = window.document.getElementById ('msg')
+        var alt = Number(alttxt.value)
+        var comp = Number(comptxt.value)
+        var metros = alt*comp
+
+        if(metros<100){
+            msg.innerHTML = `O terreno tem ${metros} metros e ele é POPULAR `
+        } else if(metros>=100 && metros<500){
+            msg.innerHTML = `o terreno tem ${metros} metros e ele é MASTER`
+        } else{
+            msg.innerHTML = `O terreno tem ${metros} metros e ele é VIP`
+        }
+
+     }
+
+    
+
+
+
+
+
+
+    
+
+    </script>
+
+</body>
+</html>

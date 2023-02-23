@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ex02</title>
+    <link rel="stylesheet" href="Estilogeral.css">
+</head>
+<body>
+    <main>
+    <h1>Média do aluno</h1>
+    <p>Coloque sua primeira nota aqui:</p>
+    <input type="number" name="txn1" id="txtn1">
+    <p>Coloque sua segunda nota aqui:</p>
+    <input type="number" name="txn2" id="txtn2">
+    <div id="msg">
+
+    </div>
+    <p>
+        <input type="submit" value="calcular media" onclick="media()">
+    </p>
+</main>
+
+    <script>
+        function media() {
+            
+            var txtn1= window.document.getElementById('txtn1')
+            var txtn2= window.document.getElementById('txtn2')
+            var msg = window.document.getElementById ('msg')
+            var n1 = Number(txtn1.value)
+            var n2 = Number(txtn2.value)
+            var m = (n1+n2)/2
+            if(m>=7){
+                msg.innerHTML = `a sua média é ${m} e você está aprovado`                                    
+            } else if (m>=5.0 && m<6.9){
+                msg.innerHTML = `A sua média é ${m} e você está de recuperação`
+            } else{
+                msg.innerHTML = `a sua média é ${m} e você está reprovado`
+            }
+            
+
+
+
+
+
+        
+
+        }
+    </script>
+</body>
+</html>
