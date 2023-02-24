@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="Estilogeral.css">
+</head>
+<body>
+    <main>
+        <h1>Contador Inteligente</h1>
+        <div>
+            <label for="iniciotxt">Inicio</label>
+            <input type="number" name="iniciotxt" id="iniciotxt">
+        </div>
+        <div>
+            <label for="fimtxt">Fim:</label>
+            <input type="number" name="fimtxt" id="fimtxt">
+        </div>
+        <div>
+            <label for="passotxt">Passo:</label>
+            <input type="number" name="passotxt" id="passotxt">
+        </div>
+
+       <div id="msg">
+        Contando:
+       </div>
+
+        <input type="submit" value="Calcular" onclick="contador()">
+
+
+
+
+
+
+    </main>
+    <script>
+        function contador(){
+            var msg = window.document.getElementById ('msg')
+            var iniciotxt = window.document.getElementById('iniciotxt')
+            var passotxt = window.document.getElementById('passotxt')
+            var fimtxt = window.document.getElementById('fimtxt')
+            var inicio = Number(iniciotxt.value)
+            var passo = Number (passotxt.value)
+            var fim = Number(fimtxt.value)
+
+            if (inicio=== 0 || passo=== 0 || fim === 0){
+                window.alert('Está faltando dados')
+            } else{
+                     for(var c = inicio; c<=fim; c=c+passo){
+
+                    msg.innerHTML += `${c}..  `}
+                
+                    
+             } if (inicio>fim){
+                for (var c = inicio; c>=fim; c= c-passo){
+                    msg.innerHTML +=  `${c}.. \u{2705}`
+                }
+                
+             }
+            
+
+
+        }
+    </script>
+    
+</body>
+</html>
