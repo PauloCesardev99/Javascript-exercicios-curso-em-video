@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ex10</title>
+</head>
+<body>
+    <script>
+       var c=1
+       var maior = 0
+       var menor = 1000000
+        while(c<=8){
+            
+        var produto = Number(prompt('Cadastra o valor do produto aqui'))
+
+        if (produto>maior){
+        var maior = produto
+        } else if(produto<menor){
+        var menor = produto
+        }
+
+           c= c+1
+        }
+
+        window.alert (`O maior produto tem o valor de ${maior} reais e o menor ${menor} reais`)
+
+
+
+
+    </script>
+</body>
+</html>

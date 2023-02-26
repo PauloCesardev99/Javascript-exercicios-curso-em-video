@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ex07</title>
+    <link rel="stylesheet" href="Estilogeral.css">
+</head>
+<body>
+    <main>
+        <h1>Calcular o imc:</h1>
+        <div>
+            <p>Altura:</p>
+            <input type="number" name="alt" id="alt">
+        </div>
+        <div>
+            <p>Peso:</p>
+            <input type="number" name="peso" id="peso">
+        </div>
+        <div id="msg">
+
+        </div>
+
+        <div>
+            <p>
+            <input type="submit" value="Enviar" onclick="imc()">
+            </p>
+        </div>
+
+
+
+
+    </main>
+    <script>
+         function imc(){
+            var salt = window.document.getElementById ('alt')
+            var speso = window.document.getElementById ('peso')
+            var msg = window.document.getElementById ('msg')
+            var alt = Number(salt.value)
+            var peso = Number (speso.value)
+            var imc = peso/(alt*alt)
+            if (imc<18){
+    msg.innerHTML = `Seu imc é ${imc} e você está abaixo do peso`
+} else if (imc<25){
+    msg.innerHTML = `seu imc é ${imc} e você está com o peso ideal`
+} else if (imc<30){
+msg.innerHTML =`seu imc é ${imc} e você está com sobrepeso`
+} else if (imc<40){
+    msg.innerHTML = `seu imc é ${imc} e você está obeso`
+} else{
+    msg.innerHTML = `seu imc é ${imc} e você está com obesidade mórbida`
+}
+
+         }
+
+    </script>
+    
+</body>
+</html>

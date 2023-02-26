@@ -28,6 +28,8 @@
        </div>
 
         <input type="submit" value="Calcular" onclick="contador()">
+        <input type="reset" value="resetar" onclick="resetar()">
+        
 
 
 
@@ -36,33 +38,44 @@
 
     </main>
     <script>
+        function resetar(){
+            var msg = window.document.getElementById ('msg')
+            msg.innerHTML = `limpo`
+
+
+        }
         function contador(){
             var msg = window.document.getElementById ('msg')
             var iniciotxt = window.document.getElementById('iniciotxt')
             var passotxt = window.document.getElementById('passotxt')
             var fimtxt = window.document.getElementById('fimtxt')
-            var inicio = Number(iniciotxt.value)
-            var passo = Number (passotxt.value)
-            var fim = Number(fimtxt.value)
-
-            if (inicio=== 0 || passo=== 0 || fim === 0){
-                window.alert('Está faltando dados')
-            } else{
-                     for(var c = inicio; c<=fim; c=c+passo){
-
-                    msg.innerHTML += `${c}..  `}
-                
-                    
-             } if (inicio>fim){
-                for (var c = inicio; c>=fim; c= c-passo){
-                    msg.innerHTML +=  `${c}.. \u{2705}`
-                }
-                
-             }
+            var i = Number(iniciotxt.value)
+            var p= Number (passotxt.value)
+            var f = Number(fimtxt.value)
+            var c = 0
             
 
+            if (i<f) {
+                for ( var c = i; c<=f; c = c+p){
+                    msg.innerHTML += `${c} \u{1F449}`
+                }
+                msg.innerHTML += `${c} \u{F3C1}`
+            } else if (i>f){
+                for ( var c = i; c>=f; c = c-p){
+                    msg.innerHTML += `${c} \u{1F449}`
+                }
+                msg.innerHTML += `${c} \u{F3C1}`
+            }
+            
 
-        }
+          
+}
+
+                    
+              
+
+            
+        
     </script>
     
 </body>
