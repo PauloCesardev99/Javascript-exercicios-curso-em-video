@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>aula 4</title>
+    <link rel="stylesheet" href="Estilogeral.css">
+</head>
+<body>
+    <main>
+        <h1>Tabuada</h1>
+
+        <div>
+            <p>Número:</p>
+            <input type="number" name="txtn" id="txtn">
+            <p><input type="submit" value="Gerar tabuada" onclick="tabuada()"></p>
+
+        </div>
+        <div>
+            <select name="tabuada" id="seltab" size="10"></select>
+        </div>
+
+        <script>
+            function tabuada(){
+                var num = window.document.getElementById('txtn')
+                var tab = window.document.getElementById ('seltab')
+                var n = Number(num.value)
+                var c = 1
+                tab.innerHTML = 'Limpado'
+                while(c<=10){
+                        var item =document.createElement('option')
+                        item.text = `${n} X ${c} = ${n*c}`
+                        tab.appendChild(item)
+                    c = c+1
+
+
+                }
+
+
+            }
+
+        </script>
+
+
+
+
+
+    </main>
+    
+</body>
+</html>
