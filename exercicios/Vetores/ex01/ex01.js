@@ -1,9 +1,10 @@
-var c = 0
-var vetores = []
-
-while(c<8){
-var vetores = 999
-console.log(vetores)
-    c++
+var vetores =[]
+var pos = 0
+while(pos<8){
+vetores [pos] = 999
+pos++
 }
+console.log (vetores)
+
+
 

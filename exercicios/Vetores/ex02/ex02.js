@@ -1,14 +1,15 @@
 var vetores = []
-var c = 0
-var soma = 0
+var i = 0
+var s=0
 
+while (i<10){
+    var s= 5 + s         
+ vetores[i] = s
 
-while(c<=9){
-        var soma = soma+5
-    var vetores = soma
-    c++
-    console.log (vetores)
+    i++
 }
+
+console.log (vetores)
 
 
 
