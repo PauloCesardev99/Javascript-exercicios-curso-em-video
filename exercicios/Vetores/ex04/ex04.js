@@ -5,8 +5,11 @@ i = 0
 
 
 while(i<9){
-    calculo = 5  
-    vetores[i] =  calculo
+   if (i%2==0){
+    vetores[i] = 5
+   } else{
+    vetores[i] = 3
+   }
    
     
     

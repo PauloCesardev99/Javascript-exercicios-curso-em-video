@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teste</title>
+</head>
+<body>
+    <h1>Calcular vetores</h1>
+    <div>
+        <p>Quantos índice você quer no vetor?</p>
+        <p><input type="number" name="txtcasa" id="txtcasa"></p>
+    </div>
+
+    <div>
+        <p>Qual elemento você quer colocar?
+        </p>
+        <p><input type="number" name="txte" id="txte"></p>
+    </div>
+    <div>
+        <input type="submit" value="enviar" onclick="calcular()">
+    </div>
+    <div id="msg">
+        
+
+    </div>
+    <script>
+      function calcular(){
+        var msg = window.document.getElementById ('msg')
+        var itxt = window.document.getElementById ('txtcasa')
+        var txte = window.document.getElementById ('txte')
+        var i = Number(itxt.value)
+        var e = Number (txte.value)
+        var vetores = []
+        var c = 0
+        
+        while(c<i){
+        
+            vetores[c] = e
+            c++
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+      }
+
+
+
+    </script>
+    
+</body>
+</html>
